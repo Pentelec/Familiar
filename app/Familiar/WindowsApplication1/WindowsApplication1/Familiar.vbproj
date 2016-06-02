@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B536696D-66D7-44AB-A361-9A0F265589E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Familiar.My.MyApplication</StartupObject>
+    <RootNamespace>Familiar</RootNamespace>
+    <AssemblyName>Familiar</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Familiar.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Familiar.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WhatNewFamiliarGASPLogo218.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Facebook.Web, Version=5.4.1.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Facebook.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Web.Mvc, Version=5.4.1.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Facebook.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebKit.Interop, Version=533.0.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\Debug\WebKit.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="WebKitBrowser, Version=0.5.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BulletinBoardTheme1027.Designer.vb">
+      <DependentUpon>BulletinBoardTheme1027.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BulletinBoardTheme1027.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarProject-rja1228.Designer.vb">
+      <DependentUpon>CalendarProject-rja1228.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarProject-rja1228.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CmdLine.Designer.vb">
+      <DependentUpon>CmdLine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CmdLine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCard.Designer.vb">
+      <DependentUpon>EditCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacebookHelper.vb" />
+    <Compile Include="FacebookInt.Designer.vb">
+      <DependentUpon>FacebookInt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FacebookInt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamiliarFull.Designer.vb">
+      <DependentUpon>FamiliarFull.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FamiliarFull.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamiliarShake.Designer.vb">
+      <DependentUpon>FamiliarShake.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FamiliarShake.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupViewLibrary1228.Designer.vb">
+      <DependentUpon>GroupViewLibrary1228.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GroupViewLibrary1228.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpOnFBImport1027.Designer.vb">
+      <DependentUpon>HelpOnFBImport1027.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpOnFBImport1027.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpStart.Designer.vb">
+      <DependentUpon>HelpStart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HelpStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportCSV.Designer.vb">
+      <DependentUpon>ImportCSV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportCSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibAtAGlance.Designer.vb">
+      <DependentUpon>LibAtAGlance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LibAtAGlance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Library.Designer.vb">
+      <DependentUpon>Library.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Library.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewContact.Designer.vb">
+      <DependentUpon>NewContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PleaseLogIn24.Designer.vb">
+      <DependentUpon>PleaseLogIn24.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PleaseLogIn24.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecrLib1027.Designer.vb">
+      <DependentUpon>RecrLib1027.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecrLib1027.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleCont.Designer.vb">
+      <DependentUpon>SampleCont.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SampleCont.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowCard.Designer.vb">
+      <DependentUpon>ShowCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempMsg_FBImport1027.Designer.vb">
+      <DependentUpon>TempMsg_FBImport1027.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TempMsg_FBImport1027.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdaterTrigger.Designer.vb">
+      <DependentUpon>UpdaterTrigger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdaterTrigger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BulletinBoardTheme1027.resx">
+      <DependentUpon>BulletinBoardTheme1027.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarProject-rja1228.resx">
+      <DependentUpon>CalendarProject-rja1228.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmdLine.resx">
+      <DependentUpon>CmdLine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCard.resx">
+      <DependentUpon>EditCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacebookInt.resx">
+      <DependentUpon>FacebookInt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamiliarFull.resx">
+      <DependentUpon>FamiliarFull.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FamiliarShake.resx">
+      <DependentUpon>FamiliarShake.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupViewLibrary1228.resx">
+      <DependentUpon>GroupViewLibrary1228.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpOnFBImport1027.resx">
+      <DependentUpon>HelpOnFBImport1027.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpStart.resx">
+      <DependentUpon>HelpStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportCSV.resx">
+      <DependentUpon>ImportCSV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibAtAGlance.resx">
+      <DependentUpon>LibAtAGlance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Library.resx">
+      <DependentUpon>Library.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewContact.resx">
+      <DependentUpon>NewContact.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PleaseLogIn24.resx">
+      <DependentUpon>PleaseLogIn24.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecrLib1027.resx">
+      <DependentUpon>RecrLib1027.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleCont.resx">
+      <DependentUpon>SampleCont.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowCard.resx">
+      <DependentUpon>ShowCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempMsg_FBImport1027.resx">
+      <DependentUpon>TempMsg_FBImport1027.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdaterTrigger.resx">
+      <DependentUpon>UpdaterTrigger.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-hires.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb_bazzill-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w139681376.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oriel_webpages_physics_VirgoSlice.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackback.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GrayGradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueGradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toolbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IncreaseViewSizeUnselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PossibleSaveLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plec_leather020041511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plec_leather0200415111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TempLogoFamiliar712012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionMark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionMarkSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PentelecIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo_LtBlA1.png" />
+    <None Include="Resources\WhatNewFamiliarGASPLogo2181.png" />
+    <None Include="Resources\AltTabGear.png" />
+    <None Include="Resources\AltTabGear_Selected.png" />
+    <None Include="Resources\PlusAdd.png" />
+    <None Include="Resources\AltTabHyphen.png" />
+    <None Include="Resources\AltTabHyphen_Selected.png" />
+    <None Include="Resources\AltTabArrow.png" />
+    <None Include="Resources\AltTabPlus.png" />
+    <None Include="Resources\AltTabPlus_Selected.png" />
+    <None Include="Resources\AltTabArrow_Selected.png" />
+    <None Include="Resources\AltTabPlus1.png" />
+    <None Include="Resources\OCRFamiliar.png" />
+    <None Include="Resources\PlusModeNine.png" />
+    <None Include="Resources\QuestionModeNine.png" />
+    <None Include="Resources\Chicago Blackhawks 2012 Goal Horn {HQ}.mp3" />
+    <Content Include="WhatNewFamiliarGASPLogo218.ico" />
+    <None Include="Resources\old_baseball-4620.jpg" />
+    <None Include="Resources\Times Square New York City.png" />
+    <None Include="Resources\new_york_city-other.png" />
+    <None Include="Resources\Chrysler_Building_Midtown_Manhattan_New_York_City_1932.png" />
+    <None Include="Resources\Golden_Labrador_by_shiningstar25.jpg" />
+    <None Include="Resources\german-shepherd1.png" />
+    <None Include="Resources\country_canine,_german_shepherd.jpg" />
+    <None Include="Resources\German-Shepherd-puppy-by-iampeas.jpg" />
+    <None Include="Resources\Ocean-wallpaper-2.jpg" />
+    <None Include="Resources\w1396813761.gif" />
+    <None Include="Resources\ChalkyPentelecIcon.png" />
+    <None Include="Resources\IncreaseViewSizeSelected.png" />
+    <None Include="Resources\postitle4.png" />
+    <None Include="Resources\green-checkmark-clip-art.png" />
+    <None Include="Resources\RightArrow.png" />
+    <None Include="Resources\image004.png" />
+    <None Include="Resources\image006.png" />
+    <None Include="Resources\FacebookDialogPopUpBk.png" />
+    <None Include="Resources\BackOfAddressBook.png" />
+    <None Include="Resources\BackOfAddressBook_1.png" />
+    <None Include="Resources\cbback.png" />
+    <None Include="Resources\Magnet1_RJ_1027.png" />
+    <None Include="Resources\img_fb.png" />
+    <None Include="Resources\Skype.jpg" />
+    <None Include="Resources\Skype-Revised.png" />
+    <None Include="Resources\WhatMail.gif" />
+    <None Include="Resources\WhatMailRed.png" />
+    <None Include="Resources\PaperCrinklePaper.png" />
+    <None Include="Resources\dwncsv.png" />
+    <None Include="Resources\fwd.png" />
+    <None Include="Resources\SlimVersion.png" />
+    <None Include="Resources\YellowOrange.png" />
+    <None Include="Resources\img2.jpg" />
+    <None Include="Resources\img3.jpg" />
+    <None Include="Resources\NO_THEREISNOPHOTO.png" />
+    <None Include="Resources\GrayToWhite.png" />
+    <None Include="Resources\GrayToWhite1.png" />
+    <None Include="Resources\GrayToWhite2.png" />
+    <None Include="Resources\LEWUTORANGENOVIKT.png" />
+    <None Include="Resources\AGear118.png" />
+    <None Include="Resources\AGear1181.png" />
+    <None Include="Resources\ThatsAPlus.png" />
+    <None Include="Resources\SwitchToLeather.png" />
+    <None Include="Resources\Selected-GoToLeather.png" />
+    <None Include="Resources\Selected-ThatsAPlus.png" />
+    <None Include="Resources\Selected-DeleteUnContact1302013.png" />
+    <None Include="Resources\DeleteUnContact1302013.png" />
+    <None Include="Resources\PentelecFamiliarDevSplash.png" />
+    <None Include="Resources\PentelecFamiliarDevSplash_13120131624hrs.png" />
+    <None Include="Resources\Enter1.png" />
+    <None Include="Resources\Enter2.png" />
+    <None Include="Resources\WhatNewFamiliarGASPLogo218.png" />
+    <None Include="Resources\IsThis218.png" />
+    <None Include="Resources\nuevo_LtBlA.png" />
+    <None Include="Resources\postoppart.png" />
+    <None Include="Resources\Nuevo219.png" />
+    <Content Include="Logo218-128.ico" />
+    <Content Include="TempLogoFamiliar712012.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
