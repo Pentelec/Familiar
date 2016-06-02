@@ -1,0 +1,76 @@
+�������������������������������������������������������
+
+Analysis of the .pfcr file
+
+
+Used For: Pentelec Familiar (2012)
+Developed by: Pentelec
+Date Created: 6/15/2012
+Date Published: N/A
+
+�������������������������������������������������������
+
+Contents
+	- Usage
+	- Syntax
+	- Modification
+	- Additional Resources
+
+
++-----------------+
+�      Usage      �
++-----------------+
+
+The .pfcr file is in use for Pentelec Familiar programs at the time of this document's draft. It's purpose is to call all of the information for a specific contact, which will later be called in the library (.pflb) file.
+
++-----------------+
+�      Syntax     �
++-----------------+
+
+	� #
+		- Comment Character. Anything can be inserted after it is placed.
+		- Once declared, keep the comment to one line.
+		- For every comment, there needs to be a new "#" stated.
+	
+	� *
+		- Declares the end of a line of code.
+		- Once declared, any text beyond the code (other than "#") may generate an error.
+
+	� NAME [name]
+		- Returns the name of the specific card.
+		- "NAME" is required. This tells the program to return a name that comes after the statement.
+		- [name] is required. This returns the name of the card as the program interprets it.
+			- Type: String
+		- As of 6/15/2012 2039hrs, this is not required for checking by the program unless later modified (OPTIONAL).
+			- The insert of the line is recommended, if direct coding occurs. However, at this time, it is not thought of as necessary.
+
+	� FIRSTNAME [name]
+		- Returns the first name that was specified by the user.
+		- "FIRSTNAME" is required. This tells the program to pay attention, since it is going to reference the first name.
+		- [name] portion is required. This is the first name that will be displayed in the contact. 
+			- Type: String
+
+	� MIDINIT [char]
+		- Returns the middle initial character that was specified by the user.
+		- "FIRSTNAME" is required. This tells the program to pay attention, since it is going to reference the first name.
+		- [name] portion is required. This is the first name that will be displayed in the contact. 
+			- Type: String
+
+	� @PenGen
+		- Signature that shows that a Pentelec Familiar generator wrote the file.
+		- If direct coding occurs, this is not needed.
+		- OPTIONAL
+
+
++-----------------+
+�   Modification  �
++-----------------+
+
+Direct modification (in other words, via code) is not recommended unless an error occurred when compiling the file. It is recommended that the primary modification of this type of file only occurs by the Pentelec Familiar compiler upon user save. However, if modification is directly required, it is imperative that the syntax is followed very, very strictly. By forgetting a single tag, data could be lost in the library upon runtime, or data corruption may result. Please take caution when direct modification is made.
+
++-----------------+
+�  Adl. Resources �
++-----------------+
+
+Most resources can be found in Pentelec's website and in other documents that are included in this subject. There is an example of a .pflb that has comments strewn about it, so that the breakdown of a usable .pflb file can be shown while still offering logical functionality. A Pentelec developer, or any developer working with this type of file, is encouraged to read it.
+	

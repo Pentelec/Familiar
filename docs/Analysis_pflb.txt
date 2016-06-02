@@ -1,0 +1,66 @@
+¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
+Analysis of the .pflb file
+
+
+Used For: Pentelec Familiar (2012)
+Developed by: Pentelec Electronics
+Date Created: 6/15/2012
+Date Published: N/A
+
+¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦
+
+Contents
+	- Usage
+	- Syntax
+	- Modification
+	- Additional Resources
+
+
++-----------------+
+¦      Usage      ¦
++-----------------+
+
+The .pflb file is in use for Pentelec Familiar programs at the time of this document's draft. It's purpose is to call all contacts available in the library, to then be interpreted by the Pentelec Familiar code upon load.
+
++-----------------+
+¦      Syntax     ¦
++-----------------+
+
+	• #
+		- Comment Character. Anything can be inserted after it is placed.
+		- Once declared, keep the comment to one line.
+		- For every comment, there needs to be a new "#" stated.
+	
+	• *
+		- Declares the end of a line of code.
+		- Once declared, any text beyond the code (other than "#") may generate an error.
+
+	• NAME [name]
+		- Returns the name a user defined for the name.
+		- "NAME" is required. This tells the program to return a name that comes after the statement.
+		- [name] is required. This returns the name of the library as the user wants it to display.
+			- Type: String
+
+	• INCLUDE [filename],[ext],[crd/pic]
+		- Gets a card that is part of the library, so that it can be inserted in the library displayed in Pentelec Familiar.
+		- "INCLUDE" is required. This tells the program to pay attention, since it is going to reference a card.
+		- [filename] portion is required. This is the file name without extension.
+			- Type: String
+		- [ext] is required. Used when the file is a card or a picture. If the file is a card, a "pfcr" is inserted as the string for this. Otherwise, a "png" is inserted.
+			- Type: String
+		- [crd/pic] is required. If a card, then pass in crd. If a picture for the card, then pass in pic.
+			- Type: String (two-way option)
+
++-----------------+
+¦   Modification  ¦
++-----------------+
+
+Direct modification (in other words, via code) is not recommended unless an error occurred when compiling the file. It is recommended that the primary modification of this type of file only occurs by the Pentelec Familiar compiler upon user save. However, if modification is directly required, it is imperative that the syntax is followed very, very strictly. By forgetting a single tag, data could be lost in the library upon runtime, or data corruption may result. Please take caution when direct modification is made.
+
++-----------------+
+¦  Adl. Resources ¦
++-----------------+
+
+Most resources can be found in Pentelec's website and in other documents that are included in this subject. There is an example of a .pflb that has comments strewn about it, so that the breakdown of a usable .pflb file can be shown while still offering logical functionality. A Pentelec developer, or any developer working with this type of file, is encouraged to read it.
+	
